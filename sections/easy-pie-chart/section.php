@@ -48,7 +48,7 @@ class SOPieChart extends PageLinesSection {
             );
         }
 
-        $collapser_opts = array(
+        $opts = array(
             'key'   => $this->option_name,
             'type'  => 'text',
             'title' => '<i class="icon-shopping-cart"></i> ' . __('Easy Pie Chart License Key', $this->domain) . $valid,
@@ -57,7 +57,7 @@ class SOPieChart extends PageLinesSection {
 
         );
 
-        array_push($settings['eChavez']['opts'], $collapser_opts);
+        array_push($settings['eChavez']['opts'], $opts);
         return $settings;
 
     }
@@ -74,13 +74,18 @@ class SOPieChart extends PageLinesSection {
 	?>
 		<script type="text/javascript">
             jQuery(document).ready(function($) {
+
                 var easyAnimation = false;
-                $(window).bind("scroll", function(event) {
+
+                jQuery(window).bind("scroll", function(event) {
+
                    if( easyAnimation){return;}
+
                    jQuery(".section-easy-pie-chart:in-viewport").each(function() {
                         createChart();
                         easyAnimation = true;
                     });
+
                 });
 
 
