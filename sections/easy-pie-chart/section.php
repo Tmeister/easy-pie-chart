@@ -77,7 +77,7 @@ class SOPieChart extends PageLinesSection {
 
                 var easyAnimation = false;
 
-                jQuery(window).bind("scroll", function(event) {
+                jQuery(window).bind("load", function(event) {
 
                    if( easyAnimation){return;}
 
