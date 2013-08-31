@@ -101,11 +101,6 @@ class SOPieChart extends PageLinesSection {
                         lineCap: "square",
                         onStep: function(value) {
                             this.$el.find('span').text(Math.ceil( value )) ;
-                        },
-                        onStop : function(){
-                            <?php for($i=0; $i<$boxes; $i++):?>
-                                jQuery('#chart-box-<?php echo $i ?> div span').text(jQuery('#chart-box-<?php echo $i ?> div').data('percent'))
-                            <?php endfor ?>
                         }
                     });
                 }
