@@ -82,7 +82,7 @@ class SOPieChart extends PageLinesSection {
                    if( easyAnimation){return;}
 
                    jQuery(".section-easy-pie-chart:in-viewport").each(function() {
-                        createChart();
+                        createChart<?php echo $this->meta["clone"] ?>();
                         easyAnimation = true;
                     });
 
@@ -90,8 +90,8 @@ class SOPieChart extends PageLinesSection {
 
 
 
-                createChart = function(){
-                    jQuery('.percentage').easyPieChart({
+                createChart<?php echo $this->meta["clone"] ?> = function(){
+                    jQuery('<?php echo ".". $this->meta["clone"] ?> .percentage').easyPieChart({
                         animate: 1000,
                         size: 200,
                         barColor: '<?php echo pl_hashify( $bar_color ) ?>',
@@ -236,7 +236,7 @@ class SOPieChart extends PageLinesSection {
         <?php
         }
 	?>
-        <div class="row">
+        <div class="row <?php echo $this->meta['clone'] ?>">
             <?php for ($i=0; $i<$boxes; $i++): ?>
                 <div class="span<?php echo $this->opt('pie_span') ?>">
                     <div class="chart" id="chart-box-<?php echo $i ?>">
