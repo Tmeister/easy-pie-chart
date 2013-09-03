@@ -88,8 +88,6 @@ class SOPieChart extends PageLinesSection {
 
                 });
 
-
-
                 createChart<?php echo $this->meta["clone"] ?> = function(){
                     jQuery('<?php echo ".". $this->meta["clone"] ?> .percentage').easyPieChart({
                         animate: 1000,
@@ -195,40 +193,10 @@ class SOPieChart extends PageLinesSection {
 	function section_template(){
         $boxes = $this->opt('pie_boxes');
         if( $boxes == false){
-        ?>
-            <div class="row">
-                <div class="span3 ?>">
-                    <div class="chart" id="chart-box-0">
-                        <div class="percentage" data-percent="95">
-                            <span>95</span>%
-                        </div>
-                        <div class="pie-label">
-                            Sample data
-                        </div>
-                    </div>
-                </div>
-                 <div class="span3 ?>">
-                    <div class="chart" id="chart-box-0">
-                        <div class="percentage" data-percent="95">
-                            <span>5</span>%
-                        </div>
-                        <div class="pie-label">
-                            Sample data
-                        </div>
-                    </div>
-                </div>
-                 <div class="span3 ?>">
-                    <div class="chart" id="chart-box-0">
-                        <div class="percentage" data-percent="95">
-                            <span>15</span>%
-                        </div>
-                        <div class="pie-label">
-                            Sample data
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php
+            if( !$this->opt('stabs_count') ){
+                echo setup_section_notify($this, __('Please start adding some content.', 'easy-pie-chart'));
+                return;
+            }
         }
 	?>
         <div class="row <?php echo $this->meta['clone'] ?>">
