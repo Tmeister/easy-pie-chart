@@ -51,9 +51,9 @@ class SOPieChart extends PageLinesSection {
         $opts = array(
             'key'   => $this->option_name,
             'type'  => 'text',
-            'title' => '<i class="icon-shopping-cart"></i> ' . __('Easy Pie Chart License Key', $this->domain) . $valid,
-            'label' => __('License Key', $this->domain),
-            'help'  => __('The section is fully functional whitout a key license, this license is used only get access to autoupdates within your admin.', $this->domain)
+            'title' => '<i class="icon-shopping-cart"></i> ' . __('Easy Pie Chart License Key', 'easy-pie-chart') . $valid,
+            'label' => __('License Key', 'easy-pie-chart'),
+            'help'  => __('The section is fully functional whitout a key license, this license is used only get access to autoupdates within your admin.', 'easy-pie-chart')
 
         );
 
@@ -162,7 +162,7 @@ class SOPieChart extends PageLinesSection {
     }
 
     function create_box_settings($opts){
-        $loopCount = (  $this->opt('pie_boxes') ) ? $this->opt('pie_boxes') : 1;
+        $loopCount = (  $this->opt('pie_boxes') ) ? $this->opt('pie_boxes') : 0;
         for ($i=0; $i < $loopCount; $i++) {
             $box = array(
                 'key' => 'pie_box_'.$i,
