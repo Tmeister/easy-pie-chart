@@ -3,7 +3,7 @@
 Plugin Name: Easy Pie Chart
 Author: Enrique Chavez
 Author URI: http://enriquechavez.co
-Version: 1.0
+Version: 1.1
 Description: Easy pie chart is a section to show simple pie charts for single values. These charts are highly customizable, very easy to implement, scale to the resolution of the display of the client to provide sharp charts even on retina displays
 */
 
@@ -22,7 +22,7 @@ function easy_check_for_updates(){
         $license_key = trim( get_option( $item_key."_license", $default = false ) );
 
         $edd_updater = new EDD_SL_Plugin_Updater( EC_STORE_URL, __FILE__, array(
-                'version'   => '1.0',
+                'version'   => '1.1',
                 'license'   => $license_key,
                 'item_name' => $item_name,
                 'author'    => 'Enrique Chavez'

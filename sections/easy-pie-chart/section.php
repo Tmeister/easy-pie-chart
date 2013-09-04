@@ -4,7 +4,7 @@
 Section: Easy Pie Chart
 Author: Enrique Chavez
 Author URI: http://tmeister.net
-Version: 1.0
+Version: 1.1
 Description: Easy pie chart is a section to show simple pie charts for single values. These charts are highly customizable, very easy to implement, scale to the resolution of the display of the client to provide sharp charts even on retina displays
 Class Name: SOPieChart
 V3: true
@@ -17,7 +17,7 @@ Filter: misc
 class SOPieChart extends PageLinesSection {
 
     var $section_name    = 'Easy Pie Chart';
-    var $section_version = '1.0';
+    var $section_version = '1.1';
     var $option_name     = 'easy_pie_chart_license_key';
     var $section_key;
     var $chavezShop;
